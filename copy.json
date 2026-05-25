@@ -1,0 +1,232 @@
+{
+  "es": {
+    "meta": {
+      "title": "Kova Capital — Compramos una empresa mexicana. Una sola.",
+      "description": "Kova Capital es un search fund mexicano. Buscamos adquirir una empresa establecida en México, convertirnos en su dirección general y construirla durante la próxima década.",
+      "og_title": "Kova Capital",
+      "og_description": "Buscamos adquirir una empresa mexicana establecida — y dirigirla durante los próximos diez años."
+    },
+    "nav": {
+      "model": "El modelo",
+      "sectors": "Qué buscamos",
+      "why": "Por qué Kova",
+      "team": "Equipo",
+      "contact": "Contacto",
+      "lang_toggle": "EN"
+    },
+    "hero": {
+      "headline": "Compramos una empresa mexicana. Una sola. Para dirigirla durante los próximos diez años.",
+      "subhead": "Kova Capital es un search fund: un operador respaldado por inversionistas institucionales e individuales que adquiere una sola empresa, se convierte en su director general y la construye a largo plazo.",
+      "cta_primary": "Si está pensando en vender",
+      "cta_secondary": "Conózcanos"
+    },
+    "model": {
+      "section_label": "El modelo",
+      "headline": "Qué es un search fund",
+      "p1": "Un search fund no es un fondo de capital privado. No hay portafolio, no hay rotación de empresas, no hay reloj de salida a tres o cinco años. Es un modelo distinto: un solo operador — el "searcher" — recauda capital de un grupo pequeño de inversionistas institucionales e individuales con un único propósito: encontrar, adquirir y dirigir una sola empresa establecida.",
+      "p2": "Una vez cerrada la adquisición, el searcher se convierte en el director general. No llega un equipo de consultores, no se reemplaza al management existente. El operador se instala, aprende el negocio desde adentro y lo construye durante la siguiente década.",
+      "p3": "El modelo existe desde los años ochenta en Estados Unidos. En América Latina, cerca de 40 search funds han operado hasta la fecha, con resultados documentados en empresas de servicios, tecnología e industria. Kova Capital aplica ese modelo al mercado mexicano.",
+      "p4": "Para el dueño que decide vender, esto significa una cosa concreta: hay una persona — no un comité — que se hace responsable de la empresa y de su equipo.",
+      "step1_label": "Búsqueda",
+      "step1_desc": "El searcher identifica y evalúa empresas candidatas",
+      "step2_label": "Adquisición",
+      "step2_desc": "Se cierra la compra con respaldo de inversionistas institucionales",
+      "step3_label": "Operación",
+      "step3_desc": "El searcher se convierte en CEO y dirige la empresa a largo plazo"
+    },
+    "sectors": {
+      "section_label": "Qué buscamos",
+      "headline": "Qué buscamos comprar",
+      "intro": "Nos enfocamos en tres sectores donde la brecha digital es real y el playbook operativo tiene impacto claro.",
+      "card1_label": "50%",
+      "card1_title": "Servicios industriales y mantenimiento",
+      "card1_desc": "Empresas de mantenimiento, instalación y servicio técnico con contratos recurrentes y base de clientes establecida.",
+      "card1_items": ["HVAC y climatización", "Mantenimiento eléctrico e industrial", "Reparación de maquinaria", "Gestión de instalaciones (FM)", "Redes de servicio OEM"],
+      "card2_label": "40%",
+      "card2_title": "Tecnología: ciberseguridad, SaaS vertical, servicios de TI",
+      "card2_desc": "Empresas de servicios tecnológicos con potencial de conversión a ingreso recurrente mensual (MRR). El filtro es la recurrencia, no la etiqueta tecnológica.",
+      "card2_items": ["Ciberseguridad y cumplimiento", "SaaS vertical para industrias tradicionales", "MSPs y servicios de TI gestionados", "Integración y soporte de infraestructura"],
+      "card3_label": "10%",
+      "card3_title": "Servicios para el agro y ganadería",
+      "card3_desc": "Servicios e infraestructura de apoyo al sector agropecuario. Regla estricta: solo servicios — sin exposición a commodities, sin riesgo climático.",
+      "card3_items": ["Cadena de frío y logística", "Salud animal y veterinaria", "Servicios de riego y equipamiento", "Servicio de maquinaria agrícola"],
+      "criteria_headline": "Criterios de búsqueda",
+      "criteria": [
+        {"label": "Ingresos", "value": "$5M–$25M USD (~$85M–$425M MXN)"},
+        {"label": "Ubicación", "value": "México"},
+        {"label": "Antigüedad", "value": "10+ años de operación preferentemente"},
+        {"label": "Rentabilidad", "value": "Empresa rentable con flujo de caja positivo"},
+        {"label": "Situación", "value": "Dueño en proceso de sucesión o buscando liquidez parcial"}
+      ]
+    },
+    "why": {
+      "section_label": "Por qué Kova",
+      "headline": "Por qué vendernos a nosotros",
+      "intro": "El dueño que decide vender está tomando la decisión más importante de su vida profesional. Estas son las cuatro razones por las que vender a Kova es distinto.",
+      "point1_title": "Capital paciente.",
+      "point1_desc": "No tenemos reloj de salida. Los inversionistas que respaldan a Kova invierten en operadores, no en flips a tres años. El horizonte es la siguiente década, no el siguiente ciclo de fondo.",
+      "point2_title": "Un operador, no un fondo.",
+      "point2_desc": "Santiago se convierte en el director general. No se rota un equipo de consultores, no se reemplaza al management. Se opera la empresa — con conocimiento directo del negocio, del equipo y de los clientes.",
+      "point3_title": "Modernizamos sin romper.",
+      "point3_desc": "Aplicamos herramientas modernas — software de despacho, mantenimiento predictivo, CRM, conversión a ingreso recurrente — sin cambiar lo que ya funciona. Lo que hizo grande a la empresa sigue siendo el centro.",
+      "point4_title": "Discreción total.",
+      "point4_desc": "La mayoría de las conversaciones nunca se hacen públicas. Firmamos NDA antes de la primera reunión sustantiva. El proceso es confidencial desde el primer contacto."
+    },
+    "team": {
+      "section_label": "Quién está detrás",
+      "headline": "El equipo",
+      "santiago_name": "Santiago Arcelus Ortega",
+      "santiago_role": "Fundador y Searcher",
+      "santiago_bio": "Santiago es el fundador y operador de Kova Capital. Antes de lanzar Kova, trabajó como operador en Kartoi, empresa tecnológica mexicana, donde aplicó herramientas de producto, software de operaciones y modelos de ingreso recurrente en un negocio de servicios tradicional. Esa experiencia — ver de cerca la brecha entre cómo operan las empresas mexicanas establecidas y lo que es posible con las herramientas disponibles hoy — es la razón de ser de Kova. Santiago busca una sola empresa, en un solo sector, para dirigirla durante la próxima década.",
+      "investors_headline": "Inversionistas y asesores",
+      "investors_desc": "Kova Capital está respaldado por un grupo de inversionistas institucionales e individuales con experiencia en search funds, operaciones y mercados latinoamericanos. Los logos y nombres se publicarán próximamente.",
+      "logo_placeholder": "Logo TBD"
+    },
+    "contact": {
+      "section_label": "Contacto",
+      "headline": "Hablemos",
+      "intro": "Si está considerando un proceso de sucesión o venta, hablemos. Toda conversación es confidencial.",
+      "form_name": "Nombre",
+      "form_company": "Empresa",
+      "form_sector": "Sector",
+      "form_contact": "Teléfono o correo electrónico",
+      "form_message": "Mensaje (opcional)",
+      "form_submit": "Enviar mensaje",
+      "form_success": "Mensaje enviado. Santiago se pondrá en contacto con usted en breve.",
+      "form_error": "Hubo un error al enviar el mensaje. Por favor intente de nuevo o escríbanos directamente.",
+      "direct_email_label": "Correo directo",
+      "whatsapp_label": "WhatsApp",
+      "linkedin_label": "LinkedIn"
+    },
+    "footer": {
+      "tagline": "Kova Capital · Ciudad de México · 2026",
+      "privacy": "Aviso de privacidad",
+      "rights": "Todos los derechos reservados."
+    },
+    "not_buying": {
+      "headline": "Qué no buscamos",
+      "items": [
+        "Disputas familiares sin resolver",
+        "Negocios dependientes de las relaciones personales del dueño con tres clientes",
+        "Empresas con pasivos regulatorios o ambientales",
+        "Exposición pura a commodities o ciclos",
+        "Operaciones ya modernas donde no hay brecha digital real"
+      ]
+    }
+  },
+  "en": {
+    "meta": {
+      "title": "Kova Capital — One Mexican company. For the next decade.",
+      "description": "Kova Capital is a Mexican search fund. We are looking to acquire one established Mexican company, become its CEO, and build it for the long term.",
+      "og_title": "Kova Capital",
+      "og_description": "We are looking to buy one Mexican company — and run it for the next decade."
+    },
+    "nav": {
+      "model": "The model",
+      "sectors": "What we seek",
+      "why": "Why Kova",
+      "team": "Team",
+      "contact": "Contact",
+      "lang_toggle": "ES"
+    },
+    "hero": {
+      "headline": "We are looking to buy one Mexican company — and run it for the next decade.",
+      "subhead": "Kova Capital is a search fund: one operator backed by institutional and individual investors who acquires a single company, becomes its CEO, and builds it for the long term.",
+      "cta_primary": "If you are thinking of selling",
+      "cta_secondary": "Learn about us"
+    },
+    "model": {
+      "section_label": "The model",
+      "headline": "What is a search fund",
+      "p1": "A search fund is not a private equity fund. There is no portfolio, no company rotation, no three-to-five-year exit timer. It is a different model: a single operator — the "searcher" — raises capital from a small group of institutional and individual investors with one purpose: to find, acquire, and run a single established company.",
+      "p2": "Once the acquisition closes, the searcher becomes the CEO. No consulting team arrives, no existing management is replaced. The operator installs himself, learns the business from the inside, and builds it over the next decade.",
+      "p3": "The model has existed since the 1980s in the United States. In Latin America, approximately 40 search funds have operated to date, with documented results in services, technology, and industrial companies. Kova Capital applies that model to the Mexican market.",
+      "p4": "For the owner who decides to sell, this means one concrete thing: there is one person — not a committee — who takes responsibility for the company and its team.",
+      "step1_label": "Search",
+      "step1_desc": "The searcher identifies and evaluates candidate companies",
+      "step2_label": "Acquisition",
+      "step2_desc": "The purchase closes with institutional investor backing",
+      "step3_label": "Operation",
+      "step3_desc": "The searcher becomes CEO and leads the company for the long term"
+    },
+    "sectors": {
+      "section_label": "What we seek",
+      "headline": "What we are looking to buy",
+      "intro": "We focus on three sectors where the digital gap is real and the operating playbook has clear impact.",
+      "card1_label": "50%",
+      "card1_title": "Industrial services & maintenance",
+      "card1_desc": "Maintenance, installation, and technical service companies with recurring contracts and an established customer base.",
+      "card1_items": ["HVAC and climate control", "Electrical and industrial maintenance", "Machinery repair", "Facilities management (FM)", "OEM service networks"],
+      "card2_label": "40%",
+      "card2_title": "Technology: cybersecurity, vertical SaaS, IT services",
+      "card2_desc": "Technology services companies with potential for monthly recurring revenue (MRR) conversion. The filter is recurrence, not the technology label.",
+      "card2_items": ["Cybersecurity and compliance", "Vertical SaaS for traditional industries", "MSPs and managed IT services", "Infrastructure integration and support"],
+      "card3_label": "10%",
+      "card3_title": "Agro & livestock services",
+      "card3_desc": "Services and infrastructure supporting the agricultural sector. Hard rule: services only — no commodity exposure, no weather risk.",
+      "card3_items": ["Cold chain and logistics", "Animal health and veterinary", "Irrigation and equipment services", "Agricultural machinery service"],
+      "criteria_headline": "Search criteria",
+      "criteria": [
+        {"label": "Revenue", "value": "$5M–$25M USD (~$85M–$425M MXN)"},
+        {"label": "Location", "value": "Mexico"},
+        {"label": "Track record", "value": "10+ years of operation preferred"},
+        {"label": "Profitability", "value": "Profitable company with positive cash flow"},
+        {"label": "Situation", "value": "Owner pursuing succession or partial liquidity"}
+      ]
+    },
+    "why": {
+      "section_label": "Why Kova",
+      "headline": "Why sell to us",
+      "intro": "The owner who decides to sell is making the most important decision of their professional life. These are the four reasons why selling to Kova is different.",
+      "point1_title": "Patient capital.",
+      "point1_desc": "We have no exit clock. The investors backing Kova invest in operators, not in three-year flips. The horizon is the next decade, not the next fund cycle.",
+      "point2_title": "One operator, not a fund.",
+      "point2_desc": "Santiago becomes the CEO. No consulting team rotates in, no management is replaced. The company is operated — with direct knowledge of the business, the team, and the customers.",
+      "point3_title": "We modernize without breaking.",
+      "point3_desc": "We apply modern tools — dispatch software, predictive maintenance, CRM, recurring revenue conversion — without changing what already works. What made the company great remains at the center.",
+      "point4_title": "Complete discretion.",
+      "point4_desc": "Most conversations never become public. We sign an NDA before the first substantive meeting. The process is confidential from the first contact."
+    },
+    "team": {
+      "section_label": "Who is behind this",
+      "headline": "The team",
+      "santiago_name": "Santiago Arcelus Ortega",
+      "santiago_role": "Founder & Searcher",
+      "santiago_bio": "Santiago is the founder and operator of Kova Capital. Before launching Kova, he worked as an operator at Kartoi, a Mexican technology company, where he applied product tools, operations software, and recurring revenue models to a traditional services business. That experience — seeing firsthand the gap between how established Mexican companies operate and what is possible with the tools available today — is the reason Kova exists. Santiago is looking for one company, in one sector, to lead for the next decade.",
+      "investors_headline": "Investors & advisors",
+      "investors_desc": "Kova Capital is backed by a group of institutional and individual investors with experience in search funds, operations, and Latin American markets. Logos and names will be published shortly.",
+      "logo_placeholder": "Logo TBD"
+    },
+    "contact": {
+      "section_label": "Contact",
+      "headline": "Let's talk",
+      "intro": "If you are considering a succession or sale process, let's talk. Every conversation is confidential.",
+      "form_name": "Name",
+      "form_company": "Company",
+      "form_sector": "Sector",
+      "form_contact": "Phone or email",
+      "form_message": "Message (optional)",
+      "form_submit": "Send message",
+      "form_success": "Message sent. Santiago will be in touch shortly.",
+      "form_error": "There was an error sending your message. Please try again or write to us directly.",
+      "direct_email_label": "Direct email",
+      "whatsapp_label": "WhatsApp",
+      "linkedin_label": "LinkedIn"
+    },
+    "footer": {
+      "tagline": "Kova Capital · Mexico City · 2026",
+      "privacy": "Privacy notice",
+      "rights": "All rights reserved."
+    },
+    "not_buying": {
+      "headline": "What we are not looking for",
+      "items": [
+        "Unresolved family disputes",
+        "Businesses dependent on the owner's personal relationships with three customers",
+        "Companies with regulatory or environmental liabilities",
+        "Pure commodity or cyclical exposure",
+        "Already-modern operations where there is no real digital gap"
+      ]
+    }
+  }
+}
