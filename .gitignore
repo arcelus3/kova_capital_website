@@ -1,0 +1,16 @@
+# macOS noise
+.DS_Store
+**/.DS_Store
+
+# Editor/IDE
+.vscode/
+.idea/
+*.swp
+
+# Internal / non-public materials (PPM, screenshots, working drafts).
+# Anything in _internal/ stays local — never pushed to the public repo.
+_internal/
+
+# OS / temp
+*.tmp
+*.log
