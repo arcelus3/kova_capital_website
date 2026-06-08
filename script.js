@@ -254,14 +254,21 @@ function initContactForm() {
     }
 
     // Collect data
+    const nombre   = form.querySelector('#f-name')?.value.trim();
+    const empresa  = form.querySelector('#f-company')?.value.trim();
+    const sector   = form.querySelector('#f-sector')?.value.trim();
+    const contacto = form.querySelector('#f-contact')?.value.trim();
+    const mensaje  = form.querySelector('#f-message')?.value.trim();
+
     const data = {
-      nombre:   form.querySelector('#f-name')?.value.trim(),
-      empresa:  form.querySelector('#f-company')?.value.trim(),
-      sector:   form.querySelector('#f-sector')?.value.trim(),
-      contacto: form.querySelector('#f-contact')?.value.trim(),
-      mensaje:  form.querySelector('#f-message')?.value.trim(),
-      lang:     currentLang,
+      nombre, empresa, sector, contacto, mensaje,
+      lang: currentLang,
+      _subject: `Kova — ${nombre} (${empresa})`,
     };
+    // If the contact field is an email, set _replyto so replies go to the lead, not Formspree
+    if (/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(contacto)) {
+      data._replyto = contacto;
+    }
 
     // Disable submit
     const submitBtn = form.querySelector('[type="submit"]');
@@ -269,12 +276,12 @@ function initContactForm() {
     submitBtn.textContent = currentLang === 'es' ? 'Enviando…' : 'Sending…';
 
     try {
-      // TODO: Replace '/api/contact' with the real form endpoint.
-      // Options: Formspree, Netlify Forms, a serverless function, or direct email API.
-      // Example Formspree: action="https://formspree.io/f/YOUR_FORM_ID"
-      const res = await fetch('/api/contact', {
+      const res = await fetch('https://formspree.io/f/xaqkabvl', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
         body: JSON.stringify(data),
       });
 
@@ -290,10 +297,9 @@ function initContactForm() {
       // In development or when endpoint is not configured, show a friendly message
       const t = COPY?.[currentLang]?.contact;
       if (err.message.includes('Failed to fetch') || err.message.includes('NetworkError')) {
-        // Likely no backend configured yet — show placeholder message
         feedback.textContent = currentLang === 'es'
-          ? 'El formulario aún no está conectado. Por favor escríbanos directamente a santiago@kova.capital'
-          : 'The form is not yet connected. Please write directly to santiago@kova.capital';
+          ? 'No pudimos enviar su mensaje. Por favor escríbanos directamente a santiago@kartoi.mx'
+          : 'We could not send your message. Please write to us directly at santiago@kartoi.mx';
       } else {
         feedback.textContent = t?.form_error || 'Error al enviar.';
       }
