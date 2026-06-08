@@ -1,7 +1,7 @@
 /* ═══════════════════════════════════════════════════════════════
    KOVA CAPITAL — styles.css
-   Palette: Near-black #0A0E14 | Off-white #FAFAF7 | Copper #C4855A
-   Typography: Inter Tight (display) + Inter (body) + Source Serif 4 italic (accent)
+   Palette: Warm near-black #1A1A1F | Off-white #FAFAF7 | Taupe #EFECE3 | Copper #C4855A
+   Typography: Inter Tight (display + italic accent) + Inter (body)
 ═══════════════════════════════════════════════════════════════ */
 
 /* ── Reset & Custom Properties ─────────────────────────────── */
@@ -14,29 +14,29 @@
 :root {
   /* Surfaces */
   --bg:         #FAFAF7;
-  --bg-2:       #F2F0EA;
-  --ink:        #0A0E14;
-  --ink-2:      #161B23;
-  --ink-3:      #232A33;
+  --bg-2:       #E0DACA;
+  --bg-warm:    #EFECE3;
+  --ink:        #1A1A1F;
+  --ink-2:      #2A2A2F;
+  --ink-3:      #3A3A3F;
 
   /* Text */
-  --text:       #0A0E14;
-  --text-mute:  #5C6B7A;
-  --text-faint: #8B96A4;
+  --text:       #1A1A1F;
+  --text-mute:  #6B6760;
+  --text-faint: #9E9A92;
 
   /* Accent — used sparingly */
   --copper:     #C4855A;
   --copper-dark:#A86B42;
 
   /* Lines */
-  --hairline:        rgba(10,14,20,0.08);
-  --hairline-strong: rgba(10,14,20,0.16);
+  --hairline:        rgba(26,26,31,0.08);
+  --hairline-strong: rgba(26,26,31,0.16);
   --hairline-dark:   rgba(250,250,247,0.10);
 
   /* Type */
   --sans-display: 'Inter Tight', 'Inter', system-ui, -apple-system, sans-serif;
   --sans:         'Inter', system-ui, -apple-system, sans-serif;
-  --serif:        'Source Serif 4', Georgia, serif;
 
   /* Layout */
   --max-w:      1240px;
@@ -414,12 +414,13 @@ button { font: inherit; }
 }
 
 .hero-subhead-italic {
-  font-family: var(--serif);
+  font-family: var(--sans-display);
   font-style: italic;
+  font-weight: 400;
   font-size: clamp(1.05rem, 1.5vw, 1.25rem);
   color: var(--copper);
   margin-bottom: 2.5rem;
-  letter-spacing: 0;
+  letter-spacing: -0.005em;
   max-width: 580px;
   line-height: 1.5;
 }
@@ -523,23 +524,11 @@ button { font: inherit; }
 }
 
 .sector-card {
-  display: grid;
-  grid-template-columns: 80px 1fr;
-  gap: clamp(1.5rem, 3vw, 3rem);
   padding: clamp(2rem, 3.5vw, 2.75rem) 0;
   border-top: 1px solid var(--hairline-dark);
   transition: background var(--t-fast);
 }
 .sector-card:last-of-type { border-bottom: 1px solid var(--hairline-dark); }
-
-.card-label {
-  font-family: var(--sans-display);
-  font-size: 1rem;
-  font-weight: 500;
-  color: var(--copper);
-  letter-spacing: 0;
-  padding-top: 0.4rem;
-}
 
 .card-title {
   font-family: var(--sans-display);
@@ -677,7 +666,7 @@ button { font: inherit; }
    TEAM SECTION
 ══════════════════════════════════════════════════════════════ */
 .section-team {
-  background: var(--bg);
+  background: var(--bg-warm);
   padding-block: var(--section-pad);
   border-top: 1px solid var(--hairline);
 }
@@ -1115,12 +1104,7 @@ button { font: inherit; }
   .hero-ctas { flex-direction: column; }
   .btn { width: 100%; justify-content: center; }
 
-  /* Sectors — stack the label and content */
-  .sector-card {
-    grid-template-columns: 1fr;
-    gap: 0.85rem;
-  }
-  .card-label { padding-top: 0; }
+  /* Sectors — stack on mobile */
   .card-items { grid-template-columns: 1fr; }
 
   /* Why */
