@@ -152,11 +152,13 @@ button { font: inherit; }
   letter-spacing: 0.01em;
   border-radius: 2px;
   cursor: pointer;
-  transition: background var(--t), color var(--t), border-color var(--t), transform var(--t-fast);
+  transition: background var(--t), color var(--t), border-color var(--t), transform var(--t-fast), box-shadow var(--t);
   border: 1px solid transparent;
   text-decoration: none;
   white-space: nowrap;
 }
+.btn:hover { transform: translateY(-1px); }
+.btn:active { transform: translateY(0); }
 
 .btn-primary {
   background-color: var(--copper);
@@ -167,6 +169,7 @@ button { font: inherit; }
 .btn-primary:focus-visible {
   background-color: var(--copper-dark);
   border-color: var(--copper-dark);
+  box-shadow: 0 8px 24px rgba(196, 133, 90, 0.28);
 }
 
 .btn-secondary {
@@ -190,7 +193,7 @@ button { font: inherit; }
 /* ── Scroll Reveal ──────────────────────────────────────────── */
 .reveal {
   opacity: 0;
-  transform: translateY(20px);
+  transform: translateY(24px);
   transition: opacity var(--t-slow), transform var(--t-slow);
 }
 .reveal.visible {
@@ -270,10 +273,27 @@ button { font: inherit; }
   padding: 0.5rem 0.85rem;
   border-radius: 2px;
   transition: color var(--t-fast);
+  position: relative;
+}
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  left: 0.85rem;
+  right: 0.85rem;
+  bottom: 0.25rem;
+  height: 1px;
+  background: var(--copper);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--t);
 }
 .nav-links a:hover,
 .nav-links a:focus-visible {
   color: var(--bg);
+}
+.nav-links a:hover::after,
+.nav-links a:focus-visible::after {
+  transform: scaleX(1);
 }
 
 .lang-toggle {
@@ -308,6 +328,9 @@ button { font: inherit; }
   border: none;
   cursor: pointer;
   padding: 4px;
+  /* Stays clickable above the open mobile drawer */
+  position: relative;
+  z-index: 20;
 }
 .nav-toggle span {
   display: block;
@@ -340,6 +363,12 @@ button { font: inherit; }
   background: var(--ink);
 }
 
+.hero-media picture {
+  position: absolute;
+  inset: 0;
+  display: block;
+}
+
 .hero-img {
   width: 100%;
   height: 100%;
@@ -349,6 +378,12 @@ button { font: inherit; }
   filter: grayscale(100%) contrast(1.05) brightness(0.55);
   mix-blend-mode: luminosity;
   opacity: 0.65;
+  animation: hero-drift 16s cubic-bezier(0.2, 0.5, 0.3, 1) forwards;
+}
+
+@keyframes hero-drift {
+  from { transform: scale(1.06); }
+  to   { transform: scale(1); }
 }
 
 /* Copper-tinted gradient that gives the image its second tone */
@@ -733,27 +768,31 @@ button { font: inherit; }
   max-width: 320px;
 }
 
+/* Duotone monogram card — echoes the hero treatment until photos land */
 .profile-photo-placeholder {
   width: 100%;
   aspect-ratio: 4/5;
-  background: var(--bg-2);
+  background:
+    radial-gradient(ellipse at 28% 18%, rgba(196,133,90,0.30) 0%, rgba(196,133,90,0.05) 45%, transparent 72%),
+    linear-gradient(160deg, var(--ink-3) 0%, var(--ink) 75%);
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
+  overflow: hidden;
 }
 .profile-photo-placeholder::after {
   content: '';
   position: absolute;
   inset: 0;
-  border: 1px solid var(--hairline);
+  border: 1px solid rgba(250,250,247,0.08);
 }
 
 .photo-initials {
   font-family: var(--sans-display);
-  font-size: 3rem;
-  font-weight: 500;
-  letter-spacing: -0.02em;
+  font-size: 3.25rem;
+  font-weight: 400;
+  letter-spacing: 0.04em;
   color: var(--copper);
 }
 
@@ -806,59 +845,6 @@ button { font: inherit; }
   color: var(--text-mute);
   line-height: 1.65;
   margin-bottom: 1.75rem;
-}
-
-.lp-logos {
-  display: flex;
-  gap: 0.75rem;
-  flex-wrap: wrap;
-}
-
-.lp-logo-placeholder {
-  height: 44px;
-  min-width: 140px;
-  background: var(--bg-2);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.72rem;
-  color: var(--text-faint);
-  letter-spacing: 0.05em;
-  padding-inline: 1rem;
-  position: relative;
-}
-.lp-logo-placeholder::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  border: 1px solid var(--hairline);
-}
-
-.institution-logo-placeholder {
-  height: 32px;
-  min-width: 110px;
-  background: var(--bg-2);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.7rem;
-  color: var(--text-faint);
-  letter-spacing: 0.05em;
-  padding-inline: 0.75rem;
-  position: relative;
-}
-.institution-logo-placeholder::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  border: 1px solid var(--hairline);
-}
-
-.profile-logos {
-  display: flex;
-  gap: 0.75rem;
-  flex-wrap: wrap;
-  margin-top: 0.5rem;
 }
 
 /* ══════════════════════════════════════════════════════════════
@@ -1103,6 +1089,7 @@ button { font: inherit; }
     right: 0;
     bottom: 0;
     width: min(320px, 85vw);
+    z-index: 10;
     background: var(--ink);
     flex-direction: column;
     align-items: flex-start;

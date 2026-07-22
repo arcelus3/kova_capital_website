@@ -79,8 +79,7 @@
       "ines_role": "Cofundadora · Finanzas, Estrategia, Administración y Capital Humano",
       "ines_bio": "Más de una década ejecutada íntegramente en México: banca de inversión enfocada en pymes mexicanas, capital privado en Ventura Capital Privado, consultoría en McKinsey & Company, cofundadora de una fintech, y liderazgo a escala en Cinépolis. MBA por The University of Chicago Booth School of Business. Ingeniería Industrial por la Universidad Iberoamericana. Al cierre de la operación, asume la dirección general junto con Santiago.",
       "investors_headline": "Inversionistas y asesores",
-      "investors_desc": "Kova Capital está respaldada por un grupo de inversionistas institucionales e individuales con experiencia en search funds, operaciones y mercados latinoamericanos. Los nombres se publicarán próximamente.",
-      "logo_placeholder": "Logo próximamente"
+      "investors_desc": "Kova Capital está respaldada por un grupo de inversionistas institucionales e individuales con experiencia en search funds, operaciones y mercados latinoamericanos. Los nombres se publicarán próximamente."
     },
     "contact": {
       "section_label": "Contacto",
@@ -94,9 +93,11 @@
       "form_submit": "Enviar mensaje",
       "form_success": "Mensaje enviado. Nos pondremos en contacto en breve.",
       "form_error": "Hubo un error al enviar el mensaje. Por favor intente de nuevo o escríbanos directamente.",
-      "direct_email_label": "Correo directo",
+      "email_santiago_label": "Correo — Santiago",
+      "email_ines_label": "Correo — Inés",
       "whatsapp_label": "WhatsApp",
-      "linkedin_label": "LinkedIn"
+      "linkedin_santiago_label": "LinkedIn — Santiago",
+      "linkedin_ines_label": "LinkedIn — Inés"
     },
     "footer": {
       "tagline": "Kova Capital · Ciudad de México · 2026",
@@ -194,8 +195,7 @@
       "ines_role": "Co-Founder · Finance, Strategy, Administration & Human Capital",
       "ines_bio": "Over a decade executed entirely in Mexico — boutique investment banking focused on Mexican SMEs, private equity at Ventura Capital Privado, management consulting at McKinsey & Company, co-founding a fintech, and enterprise-scale leadership at Cinépolis. MBA from The University of Chicago Booth School of Business. Industrial Engineering from Universidad Iberoamericana. At close, becomes co-CEO alongside Santiago.",
       "investors_headline": "Investors & advisors",
-      "investors_desc": "Kova Capital is backed by a group of institutional and individual investors with experience in search funds, operations, and Latin American markets. Names will be published shortly.",
-      "logo_placeholder": "Logo coming soon"
+      "investors_desc": "Kova Capital is backed by a group of institutional and individual investors with experience in search funds, operations, and Latin American markets. Names will be published shortly."
     },
     "contact": {
       "section_label": "Contact",
@@ -209,9 +209,11 @@
       "form_submit": "Send message",
       "form_success": "Message sent. We will be in touch shortly.",
       "form_error": "There was an error sending your message. Please try again or write to us directly.",
-      "direct_email_label": "Direct email",
+      "email_santiago_label": "Email — Santiago",
+      "email_ines_label": "Email — Inés",
       "whatsapp_label": "WhatsApp",
-      "linkedin_label": "LinkedIn"
+      "linkedin_santiago_label": "LinkedIn — Santiago",
+      "linkedin_ines_label": "LinkedIn — Inés"
     },
     "footer": {
       "tagline": "Kova Capital · Mexico City · 2026",

@@ -210,10 +210,18 @@ function initScrollReveal() {
   if (!elements.length) return;
 
   const observer = new IntersectionObserver((entries) => {
+    // Stagger elements that enter the viewport together
+    let batchIndex = 0;
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        observer.unobserve(entry.target);
+        const el = entry.target;
+        el.style.transitionDelay = `${batchIndex * 90}ms`;
+        batchIndex++;
+        el.classList.add('visible');
+        el.addEventListener('transitionend', () => {
+          el.style.transitionDelay = '';
+        }, { once: true });
+        observer.unobserve(el);
       }
     });
   }, {
@@ -298,8 +306,8 @@ function initContactForm() {
       const t = COPY?.[currentLang]?.contact;
       if (err.message.includes('Failed to fetch') || err.message.includes('NetworkError')) {
         feedback.textContent = currentLang === 'es'
-          ? 'No pudimos enviar su mensaje. Por favor escríbanos directamente a santiago@kartoi.mx'
-          : 'We could not send your message. Please write to us directly at santiago@kartoi.mx';
+          ? 'No pudimos enviar su mensaje. Por favor escríbanos directamente a santiago@kovacapital.io'
+          : 'We could not send your message. Please write to us directly at santiago@kovacapital.io';
       } else {
         feedback.textContent = t?.form_error || 'Error al enviar.';
       }

@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /_internal/
+
+Sitemap: https://kovacapital.io/sitemap.xml
