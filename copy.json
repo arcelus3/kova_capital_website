@@ -97,7 +97,9 @@
       "email_ines_label": "Correo — Inés",
       "whatsapp_label": "WhatsApp",
       "linkedin_santiago_label": "LinkedIn — Santiago",
-      "linkedin_ines_label": "LinkedIn — Inés"
+      "linkedin_ines_label": "LinkedIn — Inés",
+      "booking_label": "Agendar una llamada",
+      "booking_value": "Elija un horario — 30 min, videollamada"
     },
     "footer": {
       "tagline": "Kova Capital · Ciudad de México · 2026",
@@ -213,7 +215,9 @@
       "email_ines_label": "Email — Inés",
       "whatsapp_label": "WhatsApp",
       "linkedin_santiago_label": "LinkedIn — Santiago",
-      "linkedin_ines_label": "LinkedIn — Inés"
+      "linkedin_ines_label": "LinkedIn — Inés",
+      "booking_label": "Book a call",
+      "booking_value": "Pick a time — 30 min, video call"
     },
     "footer": {
       "tagline": "Kova Capital · Mexico City · 2026",

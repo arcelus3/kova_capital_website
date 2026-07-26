@@ -1,7 +1,7 @@
 /* ═══════════════════════════════════════════════════════════════
    KOVA CAPITAL — styles.css
    Palette: Warm near-black #1A1A1F | Off-white #FAFAF7 | Taupe #EFECE3 | Copper #C4855A
-   Typography: Inter Tight (display + italic accent) + Inter (body)
+   Typography: Fraunces (display serif) + Inter (body)
 ═══════════════════════════════════════════════════════════════ */
 
 /* ── Reset & Custom Properties ─────────────────────────────── */
@@ -35,8 +35,8 @@
   --hairline-dark:   rgba(250,250,247,0.10);
 
   /* Type */
-  --sans-display: 'Inter Tight', 'Inter', system-ui, -apple-system, sans-serif;
-  --sans:         'Inter', system-ui, -apple-system, sans-serif;
+  --serif-display: 'Fraunces', 'Iowan Old Style', Georgia, serif;
+  --sans:          'Inter', system-ui, -apple-system, sans-serif;
 
   /* Layout */
   --max-w:      1240px;
@@ -114,11 +114,11 @@ button { font: inherit; }
 }
 
 .section-headline {
-  font-family: var(--sans-display);
-  font-size: clamp(1.85rem, 4vw, 3rem);
-  font-weight: 500;
-  line-height: 1.08;
-  letter-spacing: -0.025em;
+  font-family: var(--serif-display);
+  font-size: clamp(2rem, 4.5vw, 3.4rem);
+  font-weight: 420;
+  line-height: 1.06;
+  letter-spacing: -0.01em;
   color: var(--text);
   margin-bottom: 1.25rem;
   text-wrap: balance;
@@ -235,10 +235,10 @@ button { font: inherit; }
   align-items: center;
   gap: 0.55rem;
   color: var(--bg);
-  font-family: var(--sans-display);
-  font-size: 1.05rem;
-  font-weight: 500;
-  letter-spacing: -0.01em;
+  font-family: var(--serif-display);
+  font-size: 1.1rem;
+  font-weight: 480;
+  letter-spacing: 0;
   flex-shrink: 0;
 }
 
@@ -250,9 +250,9 @@ button { font: inherit; }
   height: 26px;
   background: var(--copper);
   color: #fff;
-  font-family: var(--sans-display);
-  font-size: 0.85rem;
-  font-weight: 600;
+  font-family: var(--serif-display);
+  font-size: 0.9rem;
+  font-weight: 550;
   border-radius: 2px;
   line-height: 1;
 }
@@ -377,7 +377,7 @@ button { font: inherit; }
   /* Duotone foundation: monochrome + reduced contrast, blended with copper-tinted background */
   filter: grayscale(100%) contrast(1.05) brightness(0.55);
   mix-blend-mode: luminosity;
-  opacity: 0.65;
+  opacity: 0.55;
   animation: hero-drift 16s cubic-bezier(0.2, 0.5, 0.3, 1) forwards;
 }
 
@@ -427,11 +427,11 @@ button { font: inherit; }
 }
 
 .hero-headline {
-  font-family: var(--sans-display);
-  font-size: clamp(2.4rem, 6.5vw, 5.25rem);
-  font-weight: 500;
-  line-height: 1.05;
-  letter-spacing: -0.035em;
+  font-family: var(--serif-display);
+  font-size: clamp(2.6rem, 6.8vw, 5.5rem);
+  font-weight: 400;
+  line-height: 1.03;
+  letter-spacing: -0.015em;
   color: var(--bg);
   margin-bottom: 1.75rem;
   white-space: pre-line;
@@ -449,13 +449,13 @@ button { font: inherit; }
 }
 
 .hero-subhead-italic {
-  font-family: var(--sans-display);
+  font-family: var(--serif-display);
   font-style: italic;
   font-weight: 400;
-  font-size: clamp(1.05rem, 1.5vw, 1.25rem);
+  font-size: clamp(1.15rem, 1.7vw, 1.4rem);
   color: var(--copper);
   margin-bottom: 2.5rem;
-  letter-spacing: -0.005em;
+  letter-spacing: 0;
   max-width: 580px;
   line-height: 1.5;
 }
@@ -513,18 +513,18 @@ button { font: inherit; }
 .step:last-of-type { border-bottom: 1px solid var(--hairline); }
 
 .step-number {
-  font-family: var(--sans-display);
-  font-size: 1rem;
-  font-weight: 500;
+  font-family: var(--serif-display);
+  font-size: 1.35rem;
+  font-weight: 400;
   color: var(--copper);
-  letter-spacing: 0.05em;
+  letter-spacing: 0.02em;
 }
 
 .step-title {
-  font-family: var(--sans-display);
-  font-size: 1.05rem;
-  font-weight: 500;
-  letter-spacing: -0.01em;
+  font-family: var(--serif-display);
+  font-size: 1.2rem;
+  font-weight: 480;
+  letter-spacing: 0;
   color: var(--text);
   margin-bottom: 0.4rem;
 }
@@ -566,13 +566,13 @@ button { font: inherit; }
 .sector-card:last-of-type { border-bottom: 1px solid var(--hairline-dark); }
 
 .card-title {
-  font-family: var(--sans-display);
-  font-size: clamp(1.25rem, 2vw, 1.5rem);
-  font-weight: 500;
-  letter-spacing: -0.015em;
+  font-family: var(--serif-display);
+  font-size: clamp(1.4rem, 2.2vw, 1.75rem);
+  font-weight: 440;
+  letter-spacing: 0;
   color: var(--bg);
   margin-bottom: 0.85rem;
-  line-height: 1.25;
+  line-height: 1.22;
 }
 
 .card-desc {
@@ -641,12 +641,12 @@ button { font: inherit; }
 }
 
 .criteria-list dd {
-  font-family: var(--sans-display);
-  font-size: 1rem;
-  font-weight: 500;
+  font-family: var(--serif-display);
+  font-size: 1.3rem;
+  font-weight: 420;
   color: var(--bg);
-  letter-spacing: -0.005em;
-  line-height: 1.4;
+  letter-spacing: 0;
+  line-height: 1.35;
 }
 
 /* What we don't buy — placed inside the dark sectors section, after the criteria block */
@@ -716,21 +716,21 @@ button { font: inherit; }
 .why-point:last-child { border-bottom: 1px solid var(--hairline); }
 
 .why-number {
-  font-family: var(--sans-display);
-  font-size: 0.95rem;
-  font-weight: 500;
+  font-family: var(--serif-display);
+  font-size: 1.35rem;
+  font-weight: 400;
   color: var(--copper);
-  letter-spacing: 0.05em;
+  letter-spacing: 0.02em;
 }
 
 .why-title {
-  font-family: var(--sans-display);
-  font-size: clamp(1.2rem, 1.8vw, 1.45rem);
-  font-weight: 500;
-  letter-spacing: -0.015em;
+  font-family: var(--serif-display);
+  font-size: clamp(1.35rem, 2vw, 1.7rem);
+  font-weight: 450;
+  letter-spacing: 0;
   color: var(--text);
   margin-bottom: 0.6rem;
-  line-height: 1.25;
+  line-height: 1.22;
 }
 
 .why-desc {
@@ -789,20 +789,21 @@ button { font: inherit; }
 }
 
 .photo-initials {
-  font-family: var(--sans-display);
-  font-size: 3.25rem;
-  font-weight: 400;
-  letter-spacing: 0.04em;
+  font-family: var(--serif-display);
+  font-style: italic;
+  font-size: 3.5rem;
+  font-weight: 380;
+  letter-spacing: 0.05em;
   color: var(--copper);
 }
 
 .profile-text { max-width: 520px; }
 
 .profile-name {
-  font-family: var(--sans-display);
-  font-size: clamp(1.4rem, 2.5vw, 1.75rem);
-  font-weight: 500;
-  letter-spacing: -0.02em;
+  font-family: var(--serif-display);
+  font-size: clamp(1.5rem, 2.6vw, 1.9rem);
+  font-weight: 440;
+  letter-spacing: 0;
   color: var(--text);
   margin-bottom: 0.35rem;
   line-height: 1.15;
