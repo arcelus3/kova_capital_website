@@ -1,6 +1,8 @@
 /* ═══════════════════════════════════════════════════════════════
    KOVA CAPITAL — styles.css
-   Palette: Warm near-black #1A1A1F | Off-white #FAFAF7 | Taupe #EFECE3 | Copper #C4855A
+   Brand palette (Papel Maché concept, 2026): Deep green #1B4335 |
+   Sage #6B7A62 | Charcoal #353535 | Mineral gray #797D7A |
+   Bone #F3F0E9 | Burnt orange #CC4500
    Typography: Fraunces (display serif) + Inter (body)
 ═══════════════════════════════════════════════════════════════ */
 
@@ -13,26 +15,30 @@
 
 :root {
   /* Surfaces */
-  --bg:         #FAFAF7;
-  --bg-2:       #E0DACA;
-  --bg-warm:    #EFECE3;
-  --ink:        #1A1A1F;
-  --ink-2:      #2A2A2F;
-  --ink-3:      #3A3A3F;
+  --bg:         #FAF9F5;
+  --bg-2:       #E5E0D3;
+  --bg-warm:    #F3F0E9;
+  --ink:        #1B4335;
+  --ink-2:      #235244;
+  --ink-3:      #2C5F4E;
 
   /* Text */
-  --text:       #1A1A1F;
-  --text-mute:  #6B6760;
-  --text-faint: #9E9A92;
+  --text:       #2B332E;
+  --text-mute:  #6E7370;
+  --text-faint: #9AA09B;
 
-  /* Accent — used sparingly */
-  --copper:     #C4855A;
-  --copper-dark:#A86B42;
+  /* Secondary accent — sage, used very sparingly */
+  --sage:       #6B7A62;
+
+  /* Accent — burnt orange; --copper-soft lifts it for dark surfaces */
+  --copper:     #CC4500;
+  --copper-dark:#A83800;
+  --copper-soft:#E0662A;
 
   /* Lines */
-  --hairline:        rgba(26,26,31,0.08);
-  --hairline-strong: rgba(26,26,31,0.16);
-  --hairline-dark:   rgba(250,250,247,0.10);
+  --hairline:        rgba(27,67,53,0.10);
+  --hairline-strong: rgba(27,67,53,0.20);
+  --hairline-dark:   rgba(250,249,245,0.10);
 
   /* Type */
   --serif-display: 'Fraunces', 'Iowan Old Style', Georgia, serif;
@@ -99,7 +105,7 @@ button { font: inherit; }
   font-weight: 500;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--text-mute);
+  color: var(--sage);
   margin-bottom: 1.25rem;
   display: inline-flex;
   align-items: center;
@@ -169,7 +175,7 @@ button { font: inherit; }
 .btn-primary:focus-visible {
   background-color: var(--copper-dark);
   border-color: var(--copper-dark);
-  box-shadow: 0 8px 24px rgba(196, 133, 90, 0.28);
+  box-shadow: 0 8px 24px rgba(204, 69, 0, 0.22);
 }
 
 .btn-secondary {
@@ -214,7 +220,7 @@ button { font: inherit; }
 }
 
 .site-header.scrolled {
-  background: rgba(10, 14, 20, 0.85);
+  background: rgba(14, 36, 28, 0.88);
   backdrop-filter: blur(14px) saturate(140%);
   -webkit-backdrop-filter: blur(14px) saturate(140%);
   border-bottom-color: rgba(250,250,247,0.06);
@@ -394,8 +400,8 @@ button { font: inherit; }
   background:
     radial-gradient(
       ellipse at 30% 20%,
-      rgba(196,133,90,0.35) 0%,
-      rgba(196,133,90,0.05) 40%,
+      rgba(204,69,0,0.30) 0%,
+      rgba(204,69,0,0.05) 40%,
       transparent 70%
     );
   pointer-events: none;
@@ -409,9 +415,9 @@ button { font: inherit; }
   z-index: 2;
   background: linear-gradient(
     180deg,
-    rgba(10,14,20,0.4) 0%,
-    rgba(10,14,20,0.55) 40%,
-    rgba(10,14,20,0.92) 100%
+    rgba(10,28,22,0.4) 0%,
+    rgba(10,28,22,0.55) 40%,
+    rgba(10,28,22,0.92) 100%
   );
 }
 
@@ -453,7 +459,7 @@ button { font: inherit; }
   font-style: italic;
   font-weight: 400;
   font-size: clamp(1.15rem, 1.7vw, 1.4rem);
-  color: var(--copper);
+  color: var(--copper-soft);
   margin-bottom: 2.5rem;
   letter-spacing: 0;
   max-width: 580px;
@@ -621,7 +627,7 @@ button { font: inherit; }
   font-weight: 500;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--copper);
+  color: var(--copper-soft);
   margin-bottom: 1.75rem;
 }
 
@@ -662,7 +668,7 @@ button { font: inherit; }
   font-weight: 500;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--copper);
+  color: var(--copper-soft);
   margin-bottom: 1.75rem;
 }
 
@@ -686,7 +692,7 @@ button { font: inherit; }
   position: absolute;
   left: 0;
   top: -0.05em;
-  color: var(--copper);
+  color: var(--copper-soft);
   font-size: 1.3rem;
   font-weight: 500;
   line-height: 1.2;
@@ -773,7 +779,7 @@ button { font: inherit; }
   width: 100%;
   aspect-ratio: 4/5;
   background:
-    radial-gradient(ellipse at 28% 18%, rgba(196,133,90,0.30) 0%, rgba(196,133,90,0.05) 45%, transparent 72%),
+    radial-gradient(ellipse at 28% 18%, rgba(204,69,0,0.24) 0%, rgba(204,69,0,0.05) 45%, transparent 72%),
     linear-gradient(160deg, var(--ink-3) 0%, var(--ink) 75%);
   display: flex;
   align-items: center;
@@ -794,7 +800,7 @@ button { font: inherit; }
   font-size: 3.5rem;
   font-weight: 380;
   letter-spacing: 0.05em;
-  color: var(--copper);
+  color: var(--copper-soft);
 }
 
 .profile-text { max-width: 520px; }
@@ -813,7 +819,7 @@ button { font: inherit; }
   font-size: 0.82rem;
   font-weight: 500;
   letter-spacing: 0.04em;
-  color: var(--text-mute);
+  color: var(--sage);
   margin-bottom: 1.25rem;
   line-height: 1.4;
 }
@@ -901,7 +907,7 @@ button { font: inherit; }
   width: 20px;
   height: 20px;
   flex-shrink: 0;
-  color: var(--copper);
+  color: var(--copper-soft);
 }
 
 .channel-label {
@@ -965,7 +971,7 @@ button { font: inherit; }
 .form-group input:focus,
 .form-group textarea:focus {
   outline: none;
-  border-bottom-color: var(--copper);
+  border-bottom-color: var(--copper-soft);
 }
 
 .form-group input.error,
