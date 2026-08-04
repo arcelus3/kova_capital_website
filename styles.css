@@ -1,10 +1,22 @@
 /* ═══════════════════════════════════════════════════════════════
    KOVA CAPITAL — styles.css
-   Brand palette (Papel Maché concept, 2026): Deep green #1B4335 |
-   Sage #6B7A62 | Charcoal #353535 | Mineral gray #797D7A |
-   Bone #F3F0E9 | Burnt orange #CC4500
-   Typography: Fraunces (display serif) + Inter (body)
+   Visual identity (Papel Maché, 2026):
+   Primarios  — Enduring Green #04281F | Signal Mist #DDEDE4
+   Secundarios — Catalyst Orange #AD3A07 | Operator Sage #6C7A63
+   Neutros    — Limestone #F2EFE8 | Open White #FFFFFF
+   Typography — Newsreader (editorial serif) + Mona Sans
+                (functional sans; SemiExpanded for labels/subtitles)
 ═══════════════════════════════════════════════════════════════ */
+
+/* Mona Sans — self-hosted variable font (wght + wdth axes) */
+@font-face {
+  font-family: 'Mona Sans';
+  src: url('fonts/mona-sans-var.woff2') format('woff2-variations');
+  font-weight: 200 900;
+  font-stretch: 75% 125%;
+  font-style: normal;
+  font-display: swap;
+}
 
 /* ── Reset & Custom Properties ─────────────────────────────── */
 *, *::before, *::after {
@@ -15,34 +27,35 @@
 
 :root {
   /* Surfaces */
-  --bg:         #FAF9F5;
-  --bg-2:       #E5E0D3;
-  --bg-warm:    #F3F0E9;
-  --ink:        #1B4335;
-  --ink-2:      #235244;
-  --ink-3:      #2C5F4E;
+  --bg:         #FFFFFF;
+  --bg-2:       #E7E3D8;
+  --bg-warm:    #F2EFE8;
+  --mist:       #DDEDE4;
+  --ink:        #04281F;
+  --ink-2:      #0B3A2E;
+  --ink-3:      #12493B;
 
   /* Text */
-  --text:       #2B332E;
-  --text-mute:  #6E7370;
-  --text-faint: #9AA09B;
+  --text:       #122019;
+  --text-mute:  #51605A;
+  --text-faint: #8A968F;
 
-  /* Secondary accent — sage, used very sparingly */
-  --sage:       #6B7A62;
+  /* Secondary accent — Operator Sage */
+  --sage:       #6C7A63;
 
-  /* Accent — burnt orange; --copper-soft lifts it for dark surfaces */
-  --copper:     #CC4500;
-  --copper-dark:#A83800;
-  --copper-soft:#E0662A;
+  /* Accent — Catalyst Orange; --copper-soft lifts it on dark green */
+  --copper:     #AD3A07;
+  --copper-dark:#8E2F05;
+  --copper-soft:#D8632B;
 
   /* Lines */
-  --hairline:        rgba(27,67,53,0.10);
-  --hairline-strong: rgba(27,67,53,0.20);
-  --hairline-dark:   rgba(250,249,245,0.10);
+  --hairline:        rgba(4,40,31,0.12);
+  --hairline-strong: rgba(4,40,31,0.22);
+  --hairline-dark:   rgba(255,255,255,0.12);
 
   /* Type */
-  --serif-display: 'Fraunces', 'Iowan Old Style', Georgia, serif;
-  --sans:          'Inter', system-ui, -apple-system, sans-serif;
+  --serif-display: 'Newsreader', 'Iowan Old Style', Georgia, serif;
+  --sans:          'Mona Sans', 'Inter', system-ui, -apple-system, sans-serif;
 
   /* Layout */
   --max-w:      1240px;
@@ -101,9 +114,10 @@ button { font: inherit; }
 
 .section-label {
   font-family: var(--sans);
+  font-stretch: 112.5%;
   font-size: 0.72rem;
-  font-weight: 500;
-  letter-spacing: 0.18em;
+  font-weight: 550;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--sage);
   margin-bottom: 1.25rem;
@@ -122,10 +136,11 @@ button { font: inherit; }
 .section-headline {
   font-family: var(--serif-display);
   font-size: clamp(2rem, 4.5vw, 3.4rem);
-  font-weight: 420;
-  line-height: 1.06;
-  letter-spacing: -0.01em;
-  color: var(--text);
+  font-weight: 300;
+  font-optical-sizing: auto;
+  line-height: 1.08;
+  letter-spacing: -0.005em;
+  color: var(--ink);
   margin-bottom: 1.25rem;
   text-wrap: balance;
 }
@@ -178,15 +193,38 @@ button { font: inherit; }
   box-shadow: 0 8px 24px rgba(204, 69, 0, 0.22);
 }
 
+/* Identity CTA style: uppercase SemiExpanded text link (mockup "START A CONVERSATION") */
 .btn-secondary {
   background-color: transparent;
-  color: var(--bg);
-  border-color: rgba(250,250,247,0.35);
+  color: var(--ink);
+  border-color: transparent;
+  padding-inline: 0.25rem;
+  font-stretch: 112.5%;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  position: relative;
+}
+.btn-secondary::after {
+  content: '';
+  position: absolute;
+  left: 0.25rem;
+  right: 0.25rem;
+  bottom: 0.55rem;
+  height: 1.5px;
+  background: var(--copper);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--t);
 }
 .btn-secondary:hover,
 .btn-secondary:focus-visible {
-  border-color: var(--bg);
-  background-color: rgba(250,250,247,0.06);
+  color: var(--copper-dark);
+}
+.btn-secondary:hover::after,
+.btn-secondary:focus-visible::after {
+  transform: scaleX(1);
 }
 
 .btn-full { width: 100%; }
@@ -220,10 +258,10 @@ button { font: inherit; }
 }
 
 .site-header.scrolled {
-  background: rgba(14, 36, 28, 0.88);
+  background: rgba(255, 255, 255, 0.88);
   backdrop-filter: blur(14px) saturate(140%);
   -webkit-backdrop-filter: blur(14px) saturate(140%);
-  border-bottom-color: rgba(250,250,247,0.06);
+  border-bottom-color: var(--hairline);
 }
 
 .nav-inner {
@@ -236,32 +274,32 @@ button { font: inherit; }
   gap: 1rem;
 }
 
+/* Firma institucional: isotipo + stacked wordmark */
 .nav-logo {
   display: inline-flex;
   align-items: center;
-  gap: 0.55rem;
-  color: var(--bg);
-  font-family: var(--serif-display);
-  font-size: 1.1rem;
-  font-weight: 480;
-  letter-spacing: 0;
+  gap: 0.6rem;
+  color: var(--ink);
   flex-shrink: 0;
+  transition: color var(--t);
 }
 
-.logo-mark {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 26px;
-  height: 26px;
-  background: var(--copper);
-  color: #fff;
-  font-family: var(--serif-display);
-  font-size: 0.9rem;
-  font-weight: 550;
-  border-radius: 2px;
-  line-height: 1;
+.logo-iso {
+  width: 30px;
+  height: 32px;
+  display: block;
 }
+
+.logo-word {
+  display: flex;
+  flex-direction: column;
+  font-family: var(--sans);
+  font-weight: 700;
+  font-size: 0.82rem;
+  line-height: 1.08;
+  letter-spacing: 0.045em;
+}
+.logo-word-line { display: block; }
 
 .nav-links {
   display: flex;
@@ -271,11 +309,11 @@ button { font: inherit; }
 }
 
 .nav-links a {
-  color: rgba(250,250,247,0.7);
+  color: rgba(4,40,31,0.72);
   font-family: var(--sans);
   font-size: 0.84rem;
-  font-weight: 400;
-  letter-spacing: 0;
+  font-weight: 450;
+  letter-spacing: 0.01em;
   padding: 0.5rem 0.85rem;
   border-radius: 2px;
   transition: color var(--t-fast);
@@ -295,7 +333,7 @@ button { font: inherit; }
 }
 .nav-links a:hover,
 .nav-links a:focus-visible {
-  color: var(--bg);
+  color: var(--ink);
 }
 .nav-links a:hover::after,
 .nav-links a:focus-visible::after {
@@ -304,8 +342,8 @@ button { font: inherit; }
 
 .lang-toggle {
   background: transparent;
-  border: 1px solid rgba(250,250,247,0.18);
-  color: rgba(250,250,247,0.7);
+  border: 1px solid rgba(4,40,31,0.25);
+  color: rgba(4,40,31,0.72);
   font-family: var(--sans);
   font-size: 0.72rem;
   font-weight: 500;
@@ -318,8 +356,8 @@ button { font: inherit; }
 }
 .lang-toggle:hover,
 .lang-toggle:focus-visible {
-  border-color: rgba(250,250,247,0.45);
-  color: var(--bg);
+  border-color: rgba(4,40,31,0.5);
+  color: var(--ink);
 }
 
 /* Hamburger */
@@ -341,7 +379,7 @@ button { font: inherit; }
 .nav-toggle span {
   display: block;
   height: 1.5px;
-  background: var(--bg);
+  background: var(--ink);
   border-radius: 2px;
   transition: transform var(--t), opacity var(--t);
 }
@@ -356,17 +394,17 @@ button { font: inherit; }
   position: relative;
   min-height: 100svh;
   display: flex;
-  align-items: flex-end;
+  align-items: flex-start;
   padding-bottom: clamp(4rem, 8vw, 7rem);
   overflow: hidden;
-  background: var(--ink);
+  background: var(--bg-warm);
 }
 
 .hero-media {
   position: absolute;
   inset: 0;
   z-index: 0;
-  background: var(--ink);
+  background: var(--bg-warm);
 }
 
 .hero-media picture {
@@ -379,11 +417,8 @@ button { font: inherit; }
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 45%;
-  /* Duotone foundation: monochrome + reduced contrast, blended with copper-tinted background */
-  filter: grayscale(100%) contrast(1.05) brightness(0.55);
-  mix-blend-mode: luminosity;
-  opacity: 0.55;
+  object-position: center 42%;
+  /* Natural photography per identity — no duotone, no blocking overlay */
   animation: hero-drift 16s cubic-bezier(0.2, 0.5, 0.3, 1) forwards;
 }
 
@@ -392,54 +427,43 @@ button { font: inherit; }
   to   { transform: scale(1); }
 }
 
-/* Copper-tinted gradient that gives the image its second tone */
-.hero-media::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(
-      ellipse at 30% 20%,
-      rgba(204,69,0,0.30) 0%,
-      rgba(204,69,0,0.05) 40%,
-      transparent 70%
-    );
-  pointer-events: none;
-  z-index: 1;
-}
-
-/* Legibility overlay — darker at bottom where text sits */
+/* Identity photography carries its own light sky — no wash on desktop */
 .hero-overlay {
   position: absolute;
   inset: 0;
   z-index: 2;
-  background: linear-gradient(
-    180deg,
-    rgba(10,28,22,0.4) 0%,
-    rgba(10,28,22,0.55) 40%,
-    rgba(10,28,22,0.92) 100%
-  );
+  background: none;
 }
 
 .hero-content {
   position: relative;
   z-index: 3;
-  padding-top: 7rem;
+  padding-top: clamp(7rem, 14vh, 10rem);
   width: 100%;
 }
 
+/* Mockup layout: headline left, supporting copy + CTAs right — all on the sky */
 .hero-text {
-  max-width: 920px;
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
+  column-gap: clamp(2.5rem, 6vw, 6rem);
+  align-items: start;
 }
+
+.hero-headline { grid-column: 1; grid-row: 1 / span 3; }
+.hero-subhead { grid-column: 2; grid-row: 1; }
+.hero-subhead-italic { grid-column: 2; grid-row: 2; }
+.hero-ctas { grid-column: 2; grid-row: 3; }
 
 .hero-headline {
   font-family: var(--serif-display);
-  font-size: clamp(2.6rem, 6.8vw, 5.5rem);
-  font-weight: 400;
-  line-height: 1.03;
-  letter-spacing: -0.015em;
-  color: var(--bg);
-  margin-bottom: 1.75rem;
+  font-size: clamp(2.6rem, 6.4vw, 5.25rem);
+  font-weight: 300;
+  font-optical-sizing: auto;
+  line-height: 1.04;
+  letter-spacing: -0.005em;
+  color: var(--ink);
+  margin-bottom: 1.6rem;
   white-space: pre-line;
   text-wrap: balance;
 }
@@ -447,20 +471,20 @@ button { font: inherit; }
 .hero-subhead {
   font-family: var(--sans);
   font-size: clamp(1.05rem, 1.5vw, 1.2rem);
-  color: rgba(250,250,247,0.75);
+  color: rgba(4,40,31,0.82);
   line-height: 1.55;
   margin-bottom: 0.75rem;
-  max-width: 580px;
-  font-weight: 400;
+  max-width: 560px;
+  font-weight: 420;
 }
 
 .hero-subhead-italic {
   font-family: var(--serif-display);
   font-style: italic;
   font-weight: 400;
-  font-size: clamp(1.15rem, 1.7vw, 1.4rem);
-  color: var(--copper-soft);
-  margin-bottom: 2.5rem;
+  font-size: clamp(1.15rem, 1.7vw, 1.35rem);
+  color: var(--copper);
+  margin-bottom: 2rem;
   letter-spacing: 0;
   max-width: 580px;
   line-height: 1.5;
@@ -519,19 +543,20 @@ button { font: inherit; }
 .step:last-of-type { border-bottom: 1px solid var(--hairline); }
 
 .step-number {
-  font-family: var(--serif-display);
-  font-size: 1.35rem;
-  font-weight: 400;
+  font-family: var(--sans);
+  font-size: 1.3rem;
+  font-weight: 300;
   color: var(--copper);
   letter-spacing: 0.02em;
+  font-variant-numeric: tabular-nums;
 }
 
 .step-title {
   font-family: var(--serif-display);
-  font-size: 1.2rem;
-  font-weight: 480;
+  font-size: 1.25rem;
+  font-weight: 400;
   letter-spacing: 0;
-  color: var(--text);
+  color: var(--ink);
   margin-bottom: 0.4rem;
 }
 
@@ -542,6 +567,34 @@ button { font: inherit; }
 }
 
 .step-connector { display: none; }
+
+/* ══════════════════════════════════════════════════════════════
+   IMAGE BAND — full-width identity photography between sections
+══════════════════════════════════════════════════════════════ */
+.image-band {
+  width: 100%;
+  height: clamp(240px, 34vw, 440px);
+  overflow: hidden;
+}
+.image-band picture,
+.image-band img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Framed photo modules in section rails — "líneas, marcos, módulos" */
+.section-photo {
+  margin-top: clamp(2rem, 3.5vw, 3rem);
+  max-width: 420px;
+}
+.section-photo img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 2px;
+}
 
 /* ══════════════════════════════════════════════════════════════
    SECTORS SECTION — dark surface, hairline-divided
@@ -574,9 +627,9 @@ button { font: inherit; }
 .card-title {
   font-family: var(--serif-display);
   font-size: clamp(1.4rem, 2.2vw, 1.75rem);
-  font-weight: 440;
+  font-weight: 350;
   letter-spacing: 0;
-  color: var(--bg);
+  color: #FFFFFF;
   margin-bottom: 0.85rem;
   line-height: 1.22;
 }
@@ -623,9 +676,10 @@ button { font: inherit; }
 
 .criteria-headline {
   font-family: var(--sans);
+  font-stretch: 112.5%;
   font-size: 0.72rem;
-  font-weight: 500;
-  letter-spacing: 0.18em;
+  font-weight: 550;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--copper-soft);
   margin-bottom: 1.75rem;
@@ -647,12 +701,13 @@ button { font: inherit; }
 }
 
 .criteria-list dd {
-  font-family: var(--serif-display);
-  font-size: 1.3rem;
-  font-weight: 420;
-  color: var(--bg);
+  font-family: var(--sans);
+  font-size: 1.35rem;
+  font-weight: 300;
+  color: #FFFFFF;
   letter-spacing: 0;
   line-height: 1.35;
+  font-variant-numeric: tabular-nums;
 }
 
 /* What we don't buy — placed inside the dark sectors section, after the criteria block */
@@ -664,9 +719,10 @@ button { font: inherit; }
 
 .not-buying-headline {
   font-family: var(--sans);
+  font-stretch: 112.5%;
   font-size: 0.72rem;
-  font-weight: 500;
-  letter-spacing: 0.18em;
+  font-weight: 550;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--copper-soft);
   margin-bottom: 1.75rem;
@@ -702,7 +758,7 @@ button { font: inherit; }
    WHY SECTION
 ══════════════════════════════════════════════════════════════ */
 .section-why {
-  background: var(--bg);
+  background: var(--bg-warm);
   padding-block: var(--section-pad);
 }
 
@@ -722,19 +778,20 @@ button { font: inherit; }
 .why-point:last-child { border-bottom: 1px solid var(--hairline); }
 
 .why-number {
-  font-family: var(--serif-display);
-  font-size: 1.35rem;
-  font-weight: 400;
+  font-family: var(--sans);
+  font-size: 1.3rem;
+  font-weight: 300;
   color: var(--copper);
   letter-spacing: 0.02em;
+  font-variant-numeric: tabular-nums;
 }
 
 .why-title {
   font-family: var(--serif-display);
   font-size: clamp(1.35rem, 2vw, 1.7rem);
-  font-weight: 450;
+  font-weight: 400;
   letter-spacing: 0;
-  color: var(--text);
+  color: var(--ink);
   margin-bottom: 0.6rem;
   line-height: 1.22;
 }
@@ -750,7 +807,7 @@ button { font: inherit; }
    TEAM SECTION
 ══════════════════════════════════════════════════════════════ */
 .section-team {
-  background: var(--bg-warm);
+  background: var(--mist);
   padding-block: var(--section-pad);
   border-top: 1px solid var(--hairline);
 }
@@ -774,12 +831,21 @@ button { font: inherit; }
   max-width: 320px;
 }
 
-/* Duotone monogram card — echoes the hero treatment until photos land */
+.profile-photo {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4/5;
+  object-fit: cover;
+  display: block;
+  border-radius: 2px;
+}
+
+/* Enduring Green monogram card until portrait photography lands */
 .profile-photo-placeholder {
   width: 100%;
   aspect-ratio: 4/5;
   background:
-    radial-gradient(ellipse at 28% 18%, rgba(204,69,0,0.24) 0%, rgba(204,69,0,0.05) 45%, transparent 72%),
+    radial-gradient(ellipse at 28% 18%, rgba(108,122,99,0.45) 0%, rgba(108,122,99,0.10) 45%, transparent 72%),
     linear-gradient(160deg, var(--ink-3) 0%, var(--ink) 75%);
   display: flex;
   align-items: center;
@@ -798,9 +864,9 @@ button { font: inherit; }
   font-family: var(--serif-display);
   font-style: italic;
   font-size: 3.5rem;
-  font-weight: 380;
+  font-weight: 300;
   letter-spacing: 0.05em;
-  color: var(--copper-soft);
+  color: var(--mist);
 }
 
 .profile-text { max-width: 520px; }
@@ -808,20 +874,22 @@ button { font: inherit; }
 .profile-name {
   font-family: var(--serif-display);
   font-size: clamp(1.5rem, 2.6vw, 1.9rem);
-  font-weight: 440;
+  font-weight: 380;
   letter-spacing: 0;
-  color: var(--text);
+  color: var(--ink);
   margin-bottom: 0.35rem;
   line-height: 1.15;
 }
 
 .profile-role {
-  font-size: 0.82rem;
-  font-weight: 500;
-  letter-spacing: 0.04em;
+  font-size: 0.78rem;
+  font-weight: 550;
+  font-stretch: 112.5%;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
   color: var(--sage);
   margin-bottom: 1.25rem;
-  line-height: 1.4;
+  line-height: 1.5;
 }
 
 .profile-bio {
@@ -839,11 +907,12 @@ button { font: inherit; }
 
 .investors-headline {
   font-family: var(--sans);
+  font-stretch: 112.5%;
   font-size: 0.72rem;
-  font-weight: 500;
-  letter-spacing: 0.18em;
+  font-weight: 550;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: var(--text-mute);
+  color: var(--sage);
   margin-bottom: 1rem;
 }
 
@@ -912,11 +981,12 @@ button { font: inherit; }
 
 .channel-label {
   display: block;
+  font-stretch: 112.5%;
   font-size: 0.7rem;
-  font-weight: 500;
-  letter-spacing: 0.15em;
+  font-weight: 550;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: rgba(250,250,247,0.45);
+  color: rgba(255,255,255,0.5);
   margin-bottom: 0.2rem;
 }
 
@@ -941,11 +1011,12 @@ button { font: inherit; }
 }
 
 .form-group label {
+  font-stretch: 112.5%;
   font-size: 0.7rem;
-  font-weight: 500;
-  letter-spacing: 0.15em;
+  font-weight: 550;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: rgba(250,250,247,0.45);
+  color: rgba(255,255,255,0.5);
 }
 
 .form-group input,
@@ -1065,6 +1136,23 @@ button { font: inherit; }
    RESPONSIVE — Tablet (≤ 1000px)
 ══════════════════════════════════════════════════════════════ */
 @media (max-width: 1000px) {
+  .hero-text {
+    grid-template-columns: 1fr;
+  }
+  .hero-headline { grid-row: 1; }
+  .hero-subhead { grid-column: 1; grid-row: 2; }
+  .hero-subhead-italic { grid-column: 1; grid-row: 3; }
+  .hero-ctas { grid-column: 1; grid-row: 4; }
+  /* Single column drops copy lower — strengthen the wash */
+  .hero-overlay {
+    background: linear-gradient(
+      180deg,
+      rgba(242,239,232,0.92) 0%,
+      rgba(242,239,232,0.72) 45%,
+      rgba(242,239,232,0.25) 70%,
+      transparent 88%
+    );
+  }
   .section-grid {
     grid-template-columns: 1fr;
     gap: 2.5rem;
@@ -1114,7 +1202,16 @@ button { font: inherit; }
     font-size: 1.05rem;
     padding: 0.7rem 0;
     width: 100%;
-    border-bottom: 1px solid rgba(250,250,247,0.06);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    color: rgba(255,255,255,0.85);
+  }
+  .nav-links a:hover,
+  .nav-links a:focus-visible {
+    color: #FFFFFF;
+  }
+  .nav-links .lang-toggle {
+    border-color: rgba(255,255,255,0.25);
+    color: rgba(255,255,255,0.8);
   }
 
   .nav-links li:last-child a,

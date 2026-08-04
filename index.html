@@ -9,7 +9,7 @@
   <meta name="description" id="meta-description" content="Kova Capital es un search fund mexicano. Buscamos adquirir una sola empresa establecida en México, dirigirla durante la próxima década y modernizarla con herramientas de 2025." />
 
   <link rel="canonical" href="https://kovacapital.io/" />
-  <meta name="theme-color" content="#1B4335" />
+  <meta name="theme-color" content="#04281F" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
@@ -28,13 +28,14 @@
   <meta name="twitter:description" id="tw-description" content="Buscamos comprar una empresa mexicana establecida — para dirigirla los próximos diez años." />
   <meta name="twitter:image" content="https://kovacapital.io/og-preview.jpg" />
 
-  <!-- Favicon placeholder -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%231B4335'/><text x='16' y='22' font-size='18' text-anchor='middle' fill='%23F3F0E9' font-family='Georgia,serif' font-weight='600'>K</text></svg>" />
+  <!-- Favicon — Kova isotipo -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-8 -6 127 129.8'><rect x='-8' y='-6' width='127' height='129.8' fill='%2304281F'/><path fill='%23FFFFFF' d='M 95.03 42.06 L 111.01 42.06 L 111.01 0.00 C 84.70 0.00, 62.44 17.25, 54.88 41.04 C 54.15 43.33, 51.98 44.85, 49.57 44.85 L 47.40 44.85 C 44.33 44.85, 41.84 42.37, 41.84 39.29 L 41.84 0.00 L 0.00 0.00 L 0.00 79.68 L 24.35 79.68 L 24.35 79.70 C 10.80 80.28, 0.00 91.43, 0.00 105.12 L 0.00 117.79 L 24.35 117.79 L 41.84 117.79 L 41.84 79.68 L 41.84 78.50 C 41.84 75.43, 44.33 72.94, 47.40 72.94 L 49.57 72.94 C 51.98 72.94, 54.15 74.46, 54.88 76.75 C 62.44 100.55, 84.70 117.79, 111.01 117.79 L 111.01 76.31 L 95.03 76.31 C 85.57 76.31, 77.90 68.64, 77.90 59.18 C 77.90 49.73, 85.57 42.06, 95.03 42.06 Z'/></svg>" />
 
-  <!-- Google Fonts: Fraunces (display serif), Inter (body) -->
+  <!-- Brand typography: Newsreader (Google Fonts) + Mona Sans (self-hosted, see styles.css) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,340..600;1,9..144,340..600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..600;1,6..72,200..600&display=swap" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" href="fonts/mona-sans-var.woff2" crossorigin />
 
   <link rel="preload" as="image" type="image/webp" imagesrcset="hero-960.webp 960w, hero-1920.webp 1920w" imagesizes="100vw" />
 
@@ -70,7 +71,8 @@
   <header class="site-header" id="site-header">
     <nav class="nav-inner">
       <a href="#hero" class="nav-logo" aria-label="Kova Capital — inicio">
-        <span class="logo-mark">K</span><span class="logo-text">Kova Capital</span>
+        <svg class="logo-iso" viewBox="0 0 111 117.8" aria-hidden="true" focusable="false"><path fill="currentColor" d="M 95.03 42.06 L 111.01 42.06 L 111.01 0.00 C 84.70 0.00, 62.44 17.25, 54.88 41.04 C 54.15 43.33, 51.98 44.85, 49.57 44.85 L 47.40 44.85 C 44.33 44.85, 41.84 42.37, 41.84 39.29 L 41.84 0.00 L 0.00 0.00 L 0.00 79.68 L 24.35 79.68 L 24.35 79.70 C 10.80 80.28, 0.00 91.43, 0.00 105.12 L 0.00 117.79 L 24.35 117.79 L 41.84 117.79 L 41.84 79.68 L 41.84 78.50 C 41.84 75.43, 44.33 72.94, 47.40 72.94 L 49.57 72.94 C 51.98 72.94, 54.15 74.46, 54.88 76.75 C 62.44 100.55, 84.70 117.79, 111.01 117.79 L 111.01 76.31 L 95.03 76.31 C 85.57 76.31, 77.90 68.64, 77.90 59.18 C 77.90 49.73, 85.57 42.06, 95.03 42.06 Z"/></svg>
+        <span class="logo-word">KOVA<span class="logo-word-line">CAPITAL</span></span>
       </a>
 
       <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-links">
@@ -108,7 +110,7 @@
             loading="eager"
             fetchpriority="high"
             width="1920"
-            height="1279"
+            height="1908"
           />
         </picture>
         <div class="hero-overlay"></div>
@@ -179,6 +181,14 @@ Su legado, nuestro compromiso.
       </div>
     </section>
 
+    <!-- Full-width territory band — photography from the visual identity -->
+    <div class="image-band" role="presentation">
+      <picture>
+        <source type="image/webp" srcset="band-coast-2400.webp" />
+        <img src="band-coast-2400.jpg" alt="" loading="lazy" width="2400" height="888" />
+      </picture>
+    </div>
+
     <!-- ═══════════════════════════════════════════════
          SECTORS — Qué buscamos comprar
     ═══════════════════════════════════════════════ -->
@@ -188,6 +198,12 @@ Su legado, nuestro compromiso.
           <p class="section-label" data-i18n="sectors.section_label">Qué buscamos</p>
           <h2 class="section-headline" id="sectors-headline" data-i18n="sectors.headline">Qué buscamos comprar</h2>
           <p class="section-intro" data-i18n="sectors.intro">Nos enfocamos en sectores donde la brecha digital es real…</p>
+          <figure class="section-photo">
+            <picture>
+              <source type="image/webp" srcset="img-industry-1200.webp" />
+              <img src="img-industry-1200.jpg" alt="Planta industrial moderna con automatización" loading="lazy" width="1200" height="1600" />
+            </picture>
+          </figure>
         </div>
 
         <div class="sectors-body">
@@ -237,6 +253,12 @@ Su legado, nuestro compromiso.
           <p class="section-label" data-i18n="why.section_label">Por qué Kova</p>
           <h2 class="section-headline" id="why-headline" data-i18n="why.headline">Por qué vendernos a nosotros</h2>
           <p class="section-intro" data-i18n="why.intro">Vender la empresa que usted construyó no es una transacción…</p>
+          <figure class="section-photo">
+            <picture>
+              <source type="image/webp" srcset="img-meeting-1200.webp" />
+              <img src="img-meeting-1200.jpg" alt="Conversación de trabajo en una oficina" loading="lazy" width="1200" height="1576" />
+            </picture>
+          </figure>
         </div>
 
         <div class="why-body">
@@ -289,9 +311,10 @@ Su legado, nuestro compromiso.
         <div class="team-profiles">
           <article class="team-profile reveal" aria-labelledby="santiago-name">
             <div class="profile-photo-wrap">
-              <div class="profile-photo-placeholder" aria-label="Foto de Santiago Arcelus — por confirmar">
-                <span class="photo-initials">SA</span>
-              </div>
+              <picture>
+                <source type="image/webp" srcset="santiago-800.webp" />
+                <img class="profile-photo" src="santiago-800.jpg" alt="Santiago Arcelus" loading="lazy" width="800" height="1000" />
+              </picture>
             </div>
             <div class="profile-text">
               <h3 class="profile-name" id="santiago-name" data-i18n="team.santiago_name">Santiago Arcelus</h3>
